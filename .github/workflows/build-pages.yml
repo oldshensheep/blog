@@ -22,7 +22,7 @@ jobs:
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
-          repository : https://github.com/oldshensheep/oldshensheep.github.io.git
+          repository : oldshensheep/oldshensheep.github.io
           github_token: ${{ secrets.BLOG_PAT }}
           branch: gh-pages
           directory: blog
