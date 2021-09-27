@@ -98,6 +98,13 @@ module.exports = {
   },
   markdown: {
     lineNumbers: true,
+    // anchor: { permalink: false },
+    // markdown-it-toc 的选项
+    toc: { includeLevel: [1, 2, 3] },
+    extendMarkdown: (md) => {
+      // 使用更多的 markdown-it 插件!
+      md.use(require("markdown-it-footnote"));
+    },
   },
   plugins: [
     [
