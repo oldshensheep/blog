@@ -36,10 +36,20 @@ module.exports = {
       },
     ],
     ["meta", { name: "msapplication-TileColor", content: "#000000" }],
+    // [
+    //   "link",
+    //   {
+    //     rel: "",
+    //     href: ``,
+    //   },
+    // ],
+    // ["script", { src: `` }],
+    // ["script", { src: `` }],
   ],
   themeConfig: {
     type: "blog",
     huawei: false,
+    noFoundPageByTencent: false,
     nav: [
       { text: "Home", link: "/", icon: "reco-home" },
       { text: "TimeLine", link: "/timeline/", icon: "reco-date" },
@@ -88,13 +98,12 @@ module.exports = {
       "http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42112702000084",
     // 项目开始时间
     startYear: "2019",
-
-    // valineConfig: {
-    //   appId: "YMtbjL3M9vPHQUmdjPMXb86I-MdYXbMMI",
-    //   appKey: "vlbsVfFyEnSBTtRxF26R53BA",
-    //   placeholder: "写点什么吧",
-    //   avatar: "wavatar",
-    // },
+    valineConfig: {
+      // appId: "YMtbjL3M9vPHQUmdjPMXb86I-MdYXbMMI",
+      // appKey: "vlbsVfFyEnSBTtRxF26R53BA",
+      // placeholder: "写点什么吧",
+      // avatar: "wavatar",
+    },
   },
   markdown: {
     lineNumbers: true,
