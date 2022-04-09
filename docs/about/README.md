@@ -1,6 +1,6 @@
 ---
 title: 关于
-publish: false
+article: false
 ---
 
 # 个人简介

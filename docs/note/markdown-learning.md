@@ -1,9 +1,9 @@
 ---
 title: 学习Markdown
 date: 2020-12-06 10:24:12
-categories:
+category:
     - 教程
-tags:
+tag:
     - markdown
 ---
 

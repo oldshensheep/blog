@@ -1,9 +1,9 @@
 ---
 title: 我的音乐之旅
 date: 2020-09-19 11:44:16
-categories:
+category:
   - 人生
-tags:
+tag:
   - 记录
 ---
 

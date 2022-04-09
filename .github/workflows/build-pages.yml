@@ -10,10 +10,10 @@ jobs:
       - uses: actions/checkout@v2
       - run: |
           yarn install
-          yarn build
+          yarn docs:build
       - name: Commit files
         run: |
-          cd blog
+          cd docs/dist
           git config --global user.email "29306733+oldshensheep@users.noreply.github.com "
           git config --global user.name "oldshensheep"
           git init
@@ -22,9 +22,8 @@ jobs:
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
-          repository : oldshensheep/oldshensheep.github.io
+          repository: oldshensheep/oldshensheep.github.io
           github_token: ${{ secrets.BLOG_PAT }}
           branch: gh-pages
-          directory: blog
+          directory: docs/dist
           force: true
-

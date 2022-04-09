@@ -1,8 +1,7 @@
 ---
 home: true
-bgImage: '/pg4.png'
-bgImageStyle: {
-  height: '400px'
-}
-isShowTitleInHome: true
+layout: Blog
+copyright: false
+hero: false
+footer: MIT Licensed | Copyright © 2019-present oldshensheep
 ---

@@ -1,4 +1,5 @@
 node_modules
 yarn.lock
-_v_recycle_bin
-blog
+dist
+.cache
+.temp

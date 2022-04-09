@@ -1,9 +1,9 @@
 ---
 title: mount-cifs-in-android
 date: 2021-01-28 17:23:33
-categories:
+category:
     - 折腾
-tags:
+tag:
     - Android
 ---
 
