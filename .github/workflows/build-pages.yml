@@ -13,7 +13,7 @@ jobs:
           yarn docs:build
       - name: Commit files
         run: |
-          cd docs/dist
+          cd docs/.vuepress/dist
           git config --global user.email "29306733+oldshensheep@users.noreply.github.com "
           git config --global user.name "oldshensheep"
           git init
@@ -25,5 +25,5 @@ jobs:
           repository: oldshensheep/oldshensheep.github.io
           github_token: ${{ secrets.BLOG_PAT }}
           branch: gh-pages
-          directory: docs/dist
+          directory: docs/.vuepress/dist
           force: true
