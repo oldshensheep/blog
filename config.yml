@@ -1,4 +1,4 @@
-baseURL: ""
+baseURL: "https://blog.oldshensheep.com/"
 title: oldshensheep
 paginate: 5
 theme: PaperMod
