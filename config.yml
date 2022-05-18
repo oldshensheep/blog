@@ -77,7 +77,7 @@ params:
 
   socialIcons:
     - name: steam
-      url: "https://github.com/oldshensheep"
+      url: "https://steamcommunity.com/id/oldshensheep"
     - name: lastfm
       url: "https://www.last.fm/user/oldshensheep"
     - name: github
