@@ -1,4 +1,4 @@
-baseURL: "https://oldshensheep.github.io/"
+baseURL: ""
 title: oldshensheep
 paginate: 5
 theme: PaperMod
@@ -123,7 +123,7 @@ menu:
       url: /tags/
       weight: 20
     - identifier: toys
-      name: example.org
+      name: toys
       url: https://oldshensheep.github.io/toyweb/
       weight: 30
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
