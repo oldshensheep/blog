@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-          snap install hugo
+          sudo snap install hugo
           hugo
       - name: Commit files
         run: |
