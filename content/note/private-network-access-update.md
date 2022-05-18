@@ -5,7 +5,9 @@ category:
   - Web
 tag:
   - Web
----在你访问一个 http 网站时你可能遇到了下面的错误。
+---
+
+在你访问一个 http 网站时你可能遇到了下面的错误。
 `The request client is not a secure context and the resource is in more-private address space local` 这是 Chrome94 之后的版本提供的错误提示，因为你的浏览器从 一个源为 **http** 的网站访问了一个 **私有地址** (不太准确)。这在 Chrome 之后默认是不允许的。[^1]
 
 <!-- more -->

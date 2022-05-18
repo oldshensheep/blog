@@ -9,11 +9,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-          yarn install
-          yarn docs:build
+          snap install hugo
+          hugo
       - name: Commit files
         run: |
-          cd docs/.vuepress/dist
+          cd public
           git config --global user.email "29306733+oldshensheep@users.noreply.github.com "
           git config --global user.name "oldshensheep"
           git init
@@ -25,5 +25,5 @@ jobs:
           repository: oldshensheep/oldshensheep.github.io
           github_token: ${{ secrets.BLOG_PAT }}
           branch: gh-pages
-          directory: docs/.vuepress/dist
+          directory: public
           force: true
