@@ -1,9 +1,9 @@
 ---
 title: 用github+hexo创建自己的blog网站
 date: 2020-01-11 17:08:03
-category:
+categories:
     - 教程
-tag:
+tags:
     - hexo
 ---
 

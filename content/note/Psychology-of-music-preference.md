@@ -1,9 +1,9 @@
 ---
 title: 音乐偏好心理学
 date: 2020-03-06 21:46:41
-category:
+categories:
   - 心理学
-tag:
+tags:
   - 心理学
   - 胡思乱想
 ---

@@ -1,9 +1,9 @@
 ---
 title: 如何在Linux上创建一个ISCSI服务器
 date: 2020-02-25 09:55:01
-category:
+categories:
     - 折腾
-tag:
+tags:
     - Linux
     - ISCSI
 ---

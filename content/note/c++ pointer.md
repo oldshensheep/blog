@@ -1,9 +1,9 @@
 ---
 title: Pointers in C/C++
 date: 2021-06-14 14:42:56
-category:
+categories:
     - 教程
-tag:
+tags:
     - C/C++
     - 指针
 

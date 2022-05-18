@@ -1,9 +1,9 @@
 ---
 title: Private Network Access update
 date: 2021-09-27 15:50:00
-category:
+categories:
   - Web
-tag:
+tags:
   - Web
 ---
 
