@@ -8,9 +8,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: |
-          sudo snap install hugo
-          hugo
+        with:
+          submodules: true # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "latest"
+
+      - name: Build
+        run: hugo --minify
+
       - name: Commit files
         run: |
           cd public
@@ -19,6 +28,7 @@ jobs:
           git init
           git add -A
           git commit -m 'deploy'
+
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
