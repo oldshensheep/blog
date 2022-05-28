@@ -1,5 +1,5 @@
 ---
-title: mount-cifs-in-android
+title: mount cifs in android
 date: 2021-01-28 17:23:33
 categories:
     - 折腾
@@ -16,7 +16,7 @@ tags:
 ## 前提条件
 
 1. Android 系统获取 Root 权限
-2. ~~安装了 BusyBox（不确定）~~
+2. 安装了 BusyBox, 注意必须是 BusyBox ，而不是系统自带的 ToyBox，在测试中 toybox 不支持挂载网络文件系统
 
 ## 折腾的结果
 
