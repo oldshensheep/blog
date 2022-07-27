@@ -60,7 +60,7 @@ DeviceID           Caption                              Partitions Size         
 \\.\PHYSICALDRIVE0 KINGSTON RBUSNS8180S3256GJ           3          256052966400  KINGSTON RBUSNS8180S3256GJ
 ```
 打开Windows的磁盘管理，选择要挂载到Linux的磁盘，点击Offline。（U盘可能无法Offline，但是通过WSL2连接USB设备可能可行，https://docs.microsoft.com/en-us/windows/wsl/connect-usb）
-![](images/2022-07-27-19-57-33.png)
+![](./images/2022-07-27-19-57-33.png)
 
 这里我使用的是一个移动硬盘，路径是`\\.\PHYSICALDRIVE4`，Offline后
 在PowerShell中执行（需要管理员权限）
@@ -93,6 +93,7 @@ zfs-2.1.4-0ubuntu0.1
 zfs-kmod-2.1.5-1
 ```
 `zfs-kmod-2.1.5-1`是内核中的ZFS模块，在bzImage内
+
 `zfs-2.1.4-0ubuntu0.1`是安装的管理工具。版本差别过大可能有BUG。
 
 创建一个ZFS。`cannot label 'sdb': failed to detect device partitions on '/dev/sdb1': 19` 这个错误不会影响程序的运行，可以忽略。
@@ -136,9 +137,9 @@ root@sheep-laptop /h/sheep#
    zpool import <pool-name>
    ```
 ## 关于ZFS的参考文档
-ZFS documentation: https://openzfs.github.io/openzfs-docs/
-zfs deduplication https://linuxhint.com/zfs-deduplication/
-zfs compression https://linuxhint.com/enable-zfs-compression/
+ZFS documentation: https://openzfs.github.io/openzfs-docs/  
+zfs deduplication https://linuxhint.com/zfs-deduplication/  
+zfs compression https://linuxhint.com/enable-zfs-compression/  
 
 
 [^1]: https://docs.microsoft.com/en-us/windows/wsl/wsl-config
