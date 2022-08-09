@@ -61,7 +61,7 @@ GET-CimInstance -query "SELECT * from Win32_DiskDrive"
 
 应该会输出类似的结果：
 
-```
+```pwsh
 DeviceID           Caption                              Partitions Size          Model
 --------           -------                              ---------- ----          -----
 \\.\PHYSICALDRIVE3 Microsoft Virtual Disk               1          214745610240  Microsoft Virtual Disk
@@ -71,7 +71,7 @@ DeviceID           Caption                              Partitions Size         
 \\.\PHYSICALDRIVE0 KINGSTON RBUSNS8180S3256GJ           3          256052966400  KINGSTON RBUSNS8180S3256GJ
 ```
 
-打开 Windows 的磁盘管理，选择要挂载到 Linux 的磁盘，点击 Offline。（U 盘可能无法 Offline，但是通过 WSL2 连接 USB 设备可能可行，https://docs.microsoft.com/en-us/windows/wsl/connect-usb）
+打开 Windows 的磁盘管理，选择要挂载到 Linux 的磁盘，点击 Offline。（U 盘可能无法 Offline，但是通过 WSL2 连接 USB 设备可能可行，<https://docs.microsoft.com/en-us/windows/wsl/connect-usb>）
 ![](./images/2022-07-27-19-57-33.png)
 
 这里我使用的是一个移动硬盘，路径是`\\.\PHYSICALDRIVE4`，Offline 后
@@ -146,34 +146,39 @@ root@sheep-laptop /h/sheep#
 
 成功！
 
-然后你可以在 WSL2 里安装 samba 作为 SMB 文件服务器，让 Windows 使用。简单的参考文档https://ubuntu.com/tutorials/install-and-configure-samba
+然后你可以在 WSL2 里安装 samba 作为 SMB 文件服务器，让 Windows 使用。简单的参考文档<https://ubuntu.com/tutorials/install-and-configure-samba>
 
 ## 重启系统后的重新配置
 
 1. 获取可用的磁盘
+
    ```pwsh
    GET-CimInstance -query "SELECT * from Win32_DiskDrive"
    ```
+
 2. 挂载磁盘
+
    ```pwsh
    wsl --mount \\.\PHYSICALDRIVE* --bare
    ```
+
 3. 在 Linux 中导入 zpool（如果你第二步在启动 WSL2 前执行，这步可以省略）
+
    ```bash
    zpool import <pool-name>
    ```
 
 ## 关于 ZFS 的参考文档
 
-ZFS documentation: https://openzfs.github.io/openzfs-docs/  
-zfs deduplication https://linuxhint.com/zfs-deduplication/  
-zfs compression https://linuxhint.com/enable-zfs-compression/
+ZFS documentation: <https://openzfs.github.io/openzfs-docs/>  
+zfs deduplication <https://linuxhint.com/zfs-deduplication/>  
+zfs compression <https://linuxhint.com/enable-zfs-compression/>
 
 ## 参考文档
 
-https://github.com/alexhaydock/zfs-on-wsl
+<https://github.com/alexhaydock/zfs-on-wsl>
 
-https://wsl.dev/wsl2-kernel-zfs/
+<https://wsl.dev/wsl2-kernel-zfs/>
 
 [^1]: https://docs.microsoft.com/en-us/windows/wsl/wsl-config
 [^2]: https://docs.microsoft.com/en-us/windows/wsl/wsl2-mount-disk
