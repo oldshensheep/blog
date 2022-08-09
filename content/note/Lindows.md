@@ -18,7 +18,7 @@ tags:
 
 安装 scoop 也非常简单
 
-```pwsh
+```powershell
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 irm get.scoop.sh | iex
 ```
@@ -31,7 +31,7 @@ irm get.scoop.sh | iex
 安装了 scoop，是时候展现她的力量了。
 先来安装一下 busybox 和 sudo
 
-```pwsh
+```powershell
 scoop install busybox sudo
 ```
 
@@ -73,7 +73,7 @@ sudo pacman -Syu jdk-openjdk mariadb redis nginx nodejs-lts maven #等等
 有什么想安装的？输入`scoop search 搜索内容`，搜索软件，比如`scoop search jdk`
 欸？好像……什么也没有？其实 jdk 不在默认的源里，需要添加一个 java 的源
 
-```pwsh
+```powershell
 scoop bucket add java
 ```
 
@@ -82,7 +82,7 @@ scoop bucket add java
 scoop 有一些官方源也有一些第三方的源可以在这里找到 <https://scoop.sh/#/buckets>
 这里我推荐添加这些源，都是官方维护的，其他的适用性可能不广就没有列出来。
 
-```pwsh
+```powershell
 scoop bucket add extras #都是便携软件，包含大量GUI软件。jb家的IDE，vscode等等都在这里面
 scoop bucket add java # 都是jdk
 scoop bucket add nerd-fonts # 一些字体
@@ -94,7 +94,7 @@ scoop bucket add nerd-fonts # 一些字体
 <details>
   <summary>我安装的部分软件 main 仓库下的</summary>
 
-```pwsh
+```powershell
 "7zip"
 "adb"
 "apktool"
@@ -206,7 +206,7 @@ scoop bucket add nerd-fonts # 一些字体
 
 首先安装需要的开发软件
 
-```
+```powershell
 scoop install temurin-lts-jdk maven tomcat gradle mysql nginx nodejs-lts redis
 ```
 
@@ -220,12 +220,11 @@ scoop install temurin-lts-jdk maven tomcat gradle mysql nginx nodejs-lts redis
 
 ## 安装 starship
 
-安装[starship](https://starship.rs/)
+安装[starship](https://starship.rs/)`scoop install starship`
 starship 可以在执行任务完成的发送通知，在执行一些耗时命令时比较有用，还可以显示当前状态等等。
 ![官方Demo](https://raw.githubusercontent.com/starship/starship/master/media/demo.gif)
-`scoop install starship`
-具体的安装配置请看官方文档 <https://starship.rs/guide/#%F0%9F%9A%80-installation>
 
+具体的安装配置请看官方文档 <https://starship.rs/guide/#%F0%9F%9A%80-installation>
 这里不作详细介绍
 
 [^1]: <https://github.com/ScoopInstaller/Scoop/issues/2894>

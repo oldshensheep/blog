@@ -36,7 +36,7 @@ https://docs.microsoft.com/en-us/windows/wsl/install-manual
 然后在 PowerShell 窗口中执行以下命令：
 注意把`<bzImage Path>`替换成你下载的 bzImage 的路径，例如`C:\\Fun\\bzImage`
 
-```pwsh
+```powershell
 "
 [wsl2]
 kernel=<bzImage Path>
@@ -55,13 +55,13 @@ Windows 版本必须是 Windows 11 Build 22000 及更新版本，否则无法挂
 
 在 PowerShell 中执行，获取可用的磁盘
 
-```pwsh
+```powershell
 GET-CimInstance -query "SELECT * from Win32_DiskDrive"
 ```
 
 应该会输出类似的结果：
 
-```pwsh
+```powershell
 DeviceID           Caption                              Partitions Size          Model
 --------           -------                              ---------- ----          -----
 \\.\PHYSICALDRIVE3 Microsoft Virtual Disk               1          214745610240  Microsoft Virtual Disk
@@ -77,7 +77,7 @@ DeviceID           Caption                              Partitions Size         
 这里我使用的是一个移动硬盘，路径是`\\.\PHYSICALDRIVE4`，Offline 后
 在 PowerShell 中执行（需要管理员权限）
 
-```pwsh
+```powershell
 wsl --mount \\.\PHYSICALDRIVE4 --bare
 ```
 
@@ -152,13 +152,13 @@ root@sheep-laptop /h/sheep#
 
 1. 获取可用的磁盘
 
-   ```pwsh
+   ```powershell
    GET-CimInstance -query "SELECT * from Win32_DiskDrive"
    ```
 
 2. 挂载磁盘
 
-   ```pwsh
+   ```powershell
    wsl --mount \\.\PHYSICALDRIVE* --bare
    ```
 

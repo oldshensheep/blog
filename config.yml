@@ -8,7 +8,6 @@ buildDrafts: false
 buildFuture: false
 buildExpired: false
 
-
 minify:
   disableXML: true
   minifyOutput: true
@@ -138,3 +137,12 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+      hardWraps: true
+# blackfriday:
+#   nofollowLinks: true
+#   noreferrerLinks: true
+#   plainIDAnchors: true
+#   extensions: [
+#       "laxHtmlBlocks", # laxer block handling... let's see what this does?
+#       "hardLineBreak", # newlines result in line breaks
+#     ]
