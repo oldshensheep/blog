@@ -14,7 +14,7 @@ tags:
 
 <!-- more -->
 
-## 什么样的人喜欢什么样的音乐。
+## 什么样的人喜欢什么样的音乐
 
 What kind of people like what kind of music.
 为什么人们喜欢的音乐有差别？是什么决定了我们喜欢的音乐？  
