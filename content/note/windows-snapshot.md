@@ -24,10 +24,10 @@ Windows 的快照是通过 Copy On Write 实现的，众所周知对性能有一
 
 ![还原点功能](images/2022-08-10-14-07-54.png)
 
+### 新建一个快照
+
 新建一个文件测试一下快照
 在 HOME 目录下新建一个内容为 100 的 test.txt 文件
-
-### 新建一个快照
 
 ```powershell
 ❯ 100 > test.txt
@@ -107,11 +107,15 @@ Successfully deleted 3 shadow copies.
 
 ## 方便的浏览快照
 
-<https://www.nirsoft.net/utils/shadow_copy_view.html>
+<https://www.nirsoft.net/utils/shadow_copy_view.html>  
 这个软件  
 可以浏览任意一个快照的内容  
 可以方便的在文件管理器打开当前快照  
 可以……
+
+## 总结
+
+2 个命令`wmic shadowcopy call create Volume=C:\`和`vssadmin`
 
 ## FAQ
 
