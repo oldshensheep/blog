@@ -23,16 +23,16 @@ tags:
 具体安装方法参考官方文档。
 
 对于系统版本大于 Windows 10 version 2004 或者 Windows11 的用户参考下面的文档：
-https://docs.microsoft.com/en-us/windows/wsl/install
+<https://docs.microsoft.com/en-us/windows/wsl/install>
 
 对于系统版本大于 Version 1903 的参考下面的文档：
-https://docs.microsoft.com/en-us/windows/wsl/install-manual
+<https://docs.microsoft.com/en-us/windows/wsl/install-manual>
 
 ## 替换 WSL 的 Linux Kernel
 
 参考文档[^1]
 
-在此 https://github.com/oldshensheep/zfs-on-wsl/releases 下载编译好的支持 ZFS 的 Kernel，需要下载 bzImage，放到 **Windows** 的一个地方。
+在此 <https://github.com/oldshensheep/zfs-on-wsl/releases> 下载编译好的支持 ZFS 的 Kernel，需要下载 bzImage，放到 **Windows** 的一个地方。
 然后在 PowerShell 窗口中执行以下命令：
 注意把`<bzImage Path>`替换成你下载的 bzImage 的路径，例如`C:\\Fun\\bzImage`
 
@@ -130,7 +130,8 @@ cannot label 'sdb': failed to detect device partitions on '/dev/sdb1': 19
 root@sheep-laptop /h/sheep [1]#
 ```
 
-`cannot label 'sdb': failed to detect device partitions on '/dev/sdb1': 19` 这个错误不会影响程序的运行，可以忽略。
+`cannot label 'sdb': failed to detect device partitions on '/dev/sdb1': 19` 这个错误好像是 BUG，网上的方法有时候有用，有时候没有用。  
+用`fdisk -l`可以看到`sdb2`是保留分区，尝试发现`zpool create new-pool /dev/sdb1`可以成功。
 
 创建一个文件测试一下
 
