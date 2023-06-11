@@ -29,15 +29,15 @@ irm get.scoop.sh | iex
 ## 变成~~Lindows~~
 
 安装了 scoop，是时候展现她的力量了。
-先来安装一下 busybox 和 sudo
+先来安装一下 busybox 和 gsudo
 
 ```powershell
-scoop install busybox sudo
+scoop install busybox gsudo
 ```
 
 busybox 内置了 linux 的很多命令，常用的基本上都有了。
-安装 sudo 可以临时提权类似与 linux 的 sudo（不过有烦人的 UAC，关掉又不安全）。Windows 最终变成了 Linux 的样子，嘿嘿 Windows❤️Linux。
-
+安装 gsudo 可以临时提权类似与 linux 的 sudo（不过有烦人的 UAC，关掉又不安全）。Windows 最终变成了 Linux 的样子，嘿嘿 Windows❤️Linux。
+安装完成后可以使用sudo命令提权
 <details>
   <summary> 🔽点击展开 Windows中busybox自带的命令</summary>
 
